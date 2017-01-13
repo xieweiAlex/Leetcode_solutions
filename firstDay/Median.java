@@ -1,3 +1,5 @@
+package firstDay;
+
 import java.util.Arrays;
 
 /**
