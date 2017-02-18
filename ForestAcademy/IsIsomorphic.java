@@ -26,6 +26,7 @@ import java.util.Map;
  */
 public class IsIsomorphic {
 
+    // didn't work, failed by postion
     public boolean isIsomorphic(String s, String t) {
 
         Map<Character, Integer> map1 = new HashMap<>() ;
