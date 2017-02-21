@@ -1,4 +1,4 @@
-package ForestAcademy;
+package ForestAcademy.firstWeek;
 
 import java.util.Stack;
 

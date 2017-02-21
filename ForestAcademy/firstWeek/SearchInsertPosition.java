@@ -1,4 +1,4 @@
-package ForestAcademy;
+package ForestAcademy.firstWeek;
 
 /**
  * Created by Alex_Xie on 14/02/2017.
