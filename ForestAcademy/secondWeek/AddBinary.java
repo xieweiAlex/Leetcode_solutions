@@ -55,6 +55,4 @@ public class AddBinary {
         return sb.reverse().toString();
     }
 
-
-
 }

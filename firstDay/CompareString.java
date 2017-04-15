@@ -18,6 +18,7 @@ package firstDay;
  *
  */
 public class CompareString {
+
    public static boolean compareStrings(String A, String B) {
        int nums[] = new int[26];
        for (Character ch: A.toCharArray()) {
@@ -28,6 +29,8 @@ public class CompareString {
        for (Character ch: B.toCharArray()) {
            if (nums[ch - 'A'] <= 0) {
                return false;
+           } else {
+               --nums[ch - 'A'];
            }
        }
 
@@ -37,7 +40,7 @@ public class CompareString {
 
    public static void main(String[] args) {
        System.out.println(compareStrings("ABCD", "ACD"));
-       System.out.println(compareStrings("ABCDEFG", "ACC"));
+       System.out.println(compareStrings("ABCD", "AABC"));
    }
 
 }
