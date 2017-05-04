@@ -66,10 +66,10 @@ public class PlusOne {
         System.out.println("----");
     }
 
-
-    public int[] plusOne1(int[] digits) {
+    // great answer
+    public static int[] plusOne1(int[] digits) {
         int n = digits.length;
-        for(int i=n-1; i>=0; i--) {
+        for(int i = n-1; i >= 0; i--) {
             if(digits[i] < 9) {
                 digits[i]++;
                 return digits;
@@ -84,15 +84,14 @@ public class PlusOne {
     }
 
     public static void main(String[] args) {
-        PlusOne obj = new PlusOne();
 //        System.out.println(obj.plusOne(new int[]{1, 2, 3}));
 //        System.out.println(obj.plusOne(new int[]{1, 2, 9}));
 //        System.out.println(obj.plusOne(new int[]{1, 2, 9, 9}));
 //        System.out.println(obj.plusOne(new int[]{9, 9, 9, 9, 9}));
-        System.out.println(obj.plusOne1(new int[]{1, 2, 3}));
-        System.out.println(obj.plusOne1(new int[]{1, 2, 9}));
-        System.out.println(obj.plusOne1(new int[]{1, 2, 9, 9}));
-        System.out.println(obj.plusOne1(new int[]{9, 9, 9, 9, 9}));
+        System.out.println(plusOne1(new int[]{1, 2, 3}));
+        System.out.println(plusOne1(new int[]{1, 2, 9}));
+        System.out.println(plusOne1(new int[]{1, 2, 9, 9}));
+        System.out.println(plusOne1(new int[]{9, 9, 9, 9, 9}));
 
     }
 

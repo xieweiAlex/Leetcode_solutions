@@ -10,6 +10,33 @@ package ForestAcademy.secondWeek;
  */
 public class Rob {
 
+   public int rob_1(int[] nums) {
+       int a = 0, b = 0;
+       for (int i = 0; i < nums.length; i ++) {
+           if (i %2 == 0) {
+               a = Math.max(a+nums[i], b);
+           } else {
+               b = Math.max(b+nums[i], a);
+           }
+       }
+
+       return Math.max(a, b);
+   }
+
+   public int rob_2(int[] nums) {
+
+       int[] array = new int[nums.length];
+       array[0] = nums[0];
+       array[1] = Math.max(nums[0], nums[1]);
+
+       for (int i = 2; i < nums.length; i++) {
+           array[i] = Math.max(nums[i] + array[i-2], array[i-1]);
+       }
+
+       return array[nums.length-1];
+   }
+
+
     public int rob(int[] nums) {
         int length = nums.length;
         if (length == 0) {

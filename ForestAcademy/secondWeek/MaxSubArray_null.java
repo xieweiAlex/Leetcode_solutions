@@ -15,7 +15,7 @@ package ForestAcademy.secondWeek;
 
  https://leetcode.com/problems/maximum-subarray/?tab=Description
  */
-public class MaxSubArray {
+public class MaxSubArray_null {
 
     public int maxSubArray(int[] nums) {
 

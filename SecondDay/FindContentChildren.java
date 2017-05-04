@@ -25,12 +25,17 @@ public class FindContentChildren {
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);
+
+        // children
         int i = 0;
-        for(int j=0;i<g.length && j<s.length;j++) {
-            if (j >= g.length-1) {
+        // cookies
+        for(int j = 0;i < g.length && j < s.length;j++) {
+            if (j >= g.length - 1) {
                break;
             }
-            if(g[i]<=s[j]) i++;
+            if(g[i]<=s[j]) {
+                i++;
+            }
         }
         return i;
     }

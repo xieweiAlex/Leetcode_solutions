@@ -13,13 +13,19 @@ import java.util.Arrays;
 
  Example
  Given [4, 5, 1, 2, 3], return 3.
+ // 1, 2, 3, 4, 5
+ //
 
  Given [7, 9, 4, 5], return 5.
+ // 4, 5, 7, 9
 
  */
 public class Median {
     public static int median(int[] nums) {
-        if (nums.length <= 1) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
             return nums[0];
         }
 
@@ -29,7 +35,7 @@ public class Median {
             return nums[nums.length /2 -1];
         }
 
-        return nums[nums.length/2 + 1 -1];
+        return nums[nums.length/2];
     }
 
     public static void main(String[] args) {

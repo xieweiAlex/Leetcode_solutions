@@ -13,7 +13,7 @@ package ForestAcademy.firstWeek;
  [1,3,5,6], 7 → 4
  [1,3,5,6], 0 → 0
  */
-public class SearchInsertPosition {
+public class SearchInsertPosition_null {
 
     public int searchInsert(int[] nums, int target) {
         int low = 0, high = nums.length-1;
@@ -33,7 +33,7 @@ public class SearchInsertPosition {
 
 
    public static void main(String[] args) {
-       SearchInsertPosition obj = new SearchInsertPosition();
+       SearchInsertPosition_null obj = new SearchInsertPosition_null();
        System.out.println(obj.searchInsert(new int[]{1,3,5,6}, 5));
        System.out.println(obj.searchInsert(new int[]{1,3,5,6}, 2));
        System.out.println(obj.searchInsert(new int[]{1,3,5,6}, 7));

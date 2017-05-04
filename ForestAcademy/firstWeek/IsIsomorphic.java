@@ -1,8 +1,5 @@
 package ForestAcademy.firstWeek;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by Alex_Xie on 16/02/2017.
 
@@ -26,34 +23,6 @@ import java.util.Map;
  */
 public class IsIsomorphic {
 
-    // didn't work, failed by postion
-    public boolean isIsomorphic(String s, String t) {
-
-        Map<Character, Integer> map1 = new HashMap<>() ;
-        Map<Character, Integer> map2 = new HashMap<>() ;
-
-        for (int i = 0; i < s.length(); i ++) {
-            Character ch = s.charAt(i);
-            map1.put(ch, map1.getOrDefault(ch, 1) + 1);
-        }
-        for (int i = 0; i < t.length(); i ++) {
-            Character ch = t.charAt(i);
-            map2.put(ch, map2.getOrDefault(ch, 1) + 1);
-        }
-
-        if (map1.keySet().size() != map2.keySet().size()) {
-            return false;
-        }
-
-        for (Integer val: map1.values()) {
-            if (!map2.values().contains(val)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
     public boolean isIsomorphic1(String s, String t) {
 
         int[] m1 = new int[256];
@@ -71,12 +40,12 @@ public class IsIsomorphic {
     public static void main(String[] args) {
         IsIsomorphic obj = new IsIsomorphic();
 
-        System.out.println(obj.isIsomorphic("egg", "add"));
-        System.out.println(obj.isIsomorphic("foo", "bar"));
+        System.out.println(obj.isIsomorphic1("egg", "add"));
+        System.out.println(obj.isIsomorphic1("foo", "bar"));
 
-        System.out.println(obj.isIsomorphic("paper", "title"));
+        System.out.println(obj.isIsomorphic1("paper", "title"));
 
-        System.out.println(obj.isIsomorphic("aba", "baa"));
+        System.out.println(obj.isIsomorphic1("aba", "baa"));
 
     }
 

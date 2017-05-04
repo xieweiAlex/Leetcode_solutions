@@ -43,6 +43,7 @@ public class LongestPalindrome {
             }
         }
 
+        // including "abcba", "abbd" two situation
         if (cnt == s.length()/2) {
             return s.length();
         } else if (cnt != 0) {

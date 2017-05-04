@@ -29,6 +29,7 @@ public class MaxDepth {
         if (node == null) {
             return depth;
         }
+
         depth++;
         if (node.left != null && node.right == null) {
 

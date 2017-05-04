@@ -12,7 +12,6 @@ import java.util.PriorityQueue;
 
  You can swap elements in the array
 
- Have you met this question in a real interview? Yes
  Example
  In array [9,3,2,4,8], the 3rd largest element is 4.
 

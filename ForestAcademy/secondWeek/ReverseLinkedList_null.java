@@ -9,7 +9,7 @@ package ForestAcademy.secondWeek;
 
  https://leetcode.com/problems/reverse-linked-list/?tab=Description
  */
-public class ReverseLinkedList {
+public class ReverseLinkedList_null {
 
     // TODO; have not complete
     class ListNode {

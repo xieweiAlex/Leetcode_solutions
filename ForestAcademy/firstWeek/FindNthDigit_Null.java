@@ -31,7 +31,7 @@ package ForestAcademy.firstWeek;
 
  https://leetcode.com/problems/nth-digit/
  */
-public class FindNthDigit {
+public class FindNthDigit_Null {
 
     public int findNthDigit(int n) {
         if (n < 10) return n;

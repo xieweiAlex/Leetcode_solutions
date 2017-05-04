@@ -25,23 +25,6 @@ package ForestAcademy.secondWeek;
 
  */
 public class RepeatedSubstringPattern {
-    public boolean repeatedSubstringPattern(String s) {
-        int l = s.length();
-        for (int i = l / 2; i >= 1; i--) {
-            if (l % i == 0) {
-                int m = l / i;
-                String subStr = s.substring(0, i);
-                StringBuilder sb = new StringBuilder();
-                for (int j = 0; j < m; j++) {
-                    sb.append(subStr);
-                }
-                if (sb.toString().equals(s)) return true;
-            }
-        }
-
-        return false;
-    }
-
     public boolean repeatedSubstringPattern1(String s) {
         int l = s.length();
         for (int i = l/2; i >= 1; i--) {
@@ -50,7 +33,9 @@ public class RepeatedSubstringPattern {
                 String subStr = s.substring(0, i);
                 int j;
                 for (j = 1; j < m; j++) {
-                    if (!subStr.equals(s.substring(j*i, i+j*i))) break;
+                    if (!subStr.equals(s.substring(j*i, i+j*i))) {
+                        break;
+                    }
                 }
                 if (j == m)  return true;
             }

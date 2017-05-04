@@ -29,7 +29,7 @@ public class HammingWeight {
     public static int hammingWeight1(Integer n) {
         int ones = 0;
         while(n!=0) {
-            ones = ones + (n & 1);
+            ones += (n & 1);
             n = n>>>1;
         }
         return ones;

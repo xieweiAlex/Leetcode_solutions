@@ -20,11 +20,91 @@ import java.util.Map;
  https://leetcode.com/problems/relative-ranks/?tab=Description
 
  ex:
- Input: [10,3,8,9,4]
- Expect: ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 
  */
+
+    /**
+     * solution2
+     * https://discuss.leetcode.com/topic/77876/easy-java-solution-sorting/
+Basically this question is to find out the score -> ranking mapping. The easiest way is to sort those scores in nums. But we will lose their original order. We can create (score , original index) pairs and sort them by score decreasingly. Then we will have score -> ranking (new index) mapping and we can use original index to create the result.
+
+Time complexity: O(NlgN). Space complexity: O(N). N is the number of scores.
+
+Example:
+
+nums[i]    : [10, 3, 8, 9, 4]
+pair[i][0] : [10, 3, 8, 9, 4]
+pair[i][1] : [ 0, 1, 2, 3, 4]
+
+After sort:
+pair[i][0] : [10, 9, 8, 4, 3]
+pair[i][1] : [ 0, 3, 2, 4, 1]
+
+     */
+
 public class FindRelativeRanks {
+
+    public String[] findRelativeRanks2(int[] nums) {
+        if(nums == null || nums.length == 0) return new String[0];
+
+        int [][] pair = new int[nums.length][2];
+
+        for (int i = 0; i < nums.length; i++) {
+            pair[i][0] = nums[i];
+            pair[i][1] = i;
+        }
+
+        Arrays.sort(pair, (a, b) -> (b[0] - a[0]));
+
+        String result[] = new String[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
+
+                result[pair[i][1]] = "Gold Medal";
+            } else if (i == 1) {
+
+                result[pair[i][1]] = "Silver Medal";
+            } else if (i == 2) {
+
+                result[pair[i][1]] = "Bronze Medal";
+            } else {
+
+                result[pair[i][1]] = (i + 1) + "";
+            }
+        }
+
+        return result;
+    }
+
+    // Also we can use an one dimension array. This will save a little bit space but space complexity is still O(n).
+    public String[] findRelativeRanks3(int[] nums) {
+        Integer[] index = new Integer[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+            index[i] = i;
+        }
+
+        Arrays.sort(index, (a, b) -> (nums[b] - nums[a]));
+
+        String[] result = new String[nums.length];
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
+                result[index[i]] = "Gold Medal";
+            }
+            else if (i == 1) {
+                result[index[i]] = "Silver Medal";
+            }
+            else if (i == 2) {
+                result[index[i]] = "Bronze Medal";
+            }
+            else {
+                result[index[i]] = (i + 1) + "";
+            }
+        }
+
+        return result;
+    }
 
 
     public String[] findRelativeRanks1(int[] nums) {

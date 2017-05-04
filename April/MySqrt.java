@@ -21,7 +21,7 @@ public class MySqrt {
 //            if (mid * mid > x) {
             if (mid > x/mid) {
 
-                    right = mid - 1;
+                right = mid - 1;
             } else {
 //                if ((mid+1)*(mid+1) > x) {
                 if (mid + 1 > x/(mid + 1)) {
@@ -32,7 +32,4 @@ public class MySqrt {
             }
         }
     }
-
-
-
 }

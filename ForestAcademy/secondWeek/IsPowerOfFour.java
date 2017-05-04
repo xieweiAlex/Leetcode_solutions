@@ -33,6 +33,11 @@ public class IsPowerOfFour {
         return (num&(num-1))==0 && num>0 && (num-1)%3==0;
     }
 
+    // TODO: don't know
+    public boolean isPowerOfFour2(int num) {
+        return num > 0 && (num & (num - 1)) == 0 && (num - 1) % 3 == 0;
+    }
+
     public static void main(String[] args) {
         System.out.println(isPowerOfFour1(16));
         System.out.println(isPowerOfFour(117));
