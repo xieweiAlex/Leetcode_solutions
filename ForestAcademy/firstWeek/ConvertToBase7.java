@@ -27,8 +27,17 @@ public class ConvertToBase7 {
         }
         return isNeg ? "-" + res : res;
     }
+
+
     // Integer.toString(num)
 //     return Integer.toString(num, 7);
 
 
+    //
+//   push
+    //  self.view
+
+
 }
+
+
