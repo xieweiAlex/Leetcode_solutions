@@ -1,4 +1,4 @@
-package ForestAcademy.firstWeek;
+package ForestAcademy.week1;
 
 import java.util.HashMap;
 import java.util.Map;

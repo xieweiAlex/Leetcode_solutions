@@ -1,4 +1,4 @@
-package ForestAcademy.secondWeek;
+package ForestAcademy.week2;
 
 /**
  * Created by Alex_Xie on 26/02/2017.
@@ -18,14 +18,18 @@ public class TwoSum2 {
     public int[] twoSum2(int[] numbers, int target) {
         int[] indices = new int[2];
         int left = 0, right = numbers.length-1;
+
         while (left < right) {
             if (numbers[left] + numbers[right] == target) {
+
                 indices[0] = left + 1;
                 indices[1] = right + 1;
                 return indices;
             } else if(numbers[left] + numbers[right] < target) {
+
                 left++;
             } else {
+
                 right--;
             }
         }

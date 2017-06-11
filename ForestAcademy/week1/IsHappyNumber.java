@@ -1,4 +1,4 @@
-package ForestAcademy.firstWeek;
+package ForestAcademy.week1;
 
 import java.util.HashSet;
 import java.util.Set;
