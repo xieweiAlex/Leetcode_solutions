@@ -1,8 +1,6 @@
 package ForestAcademy.secondWeek;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -42,45 +40,6 @@ public class FindDisappearedNumbers {
             }
         }
         return ret;
-    }
-
-    // this is wrong
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
-        if (nums.length == 0) {
-            return new LinkedList<>();
-        } else if (nums.length == 1) {
-            return new LinkedList<>(Arrays.asList(nums[0]));
-        }
-
-        Arrays.sort(nums);
-        List<Integer> list = new LinkedList<>();
-        int m = 0;
-        for (int i = 0; i < nums.length; i ++ ) {
-            if (i != 0 && nums[i] == nums[i-1]) {
-                m--;
-                continue;
-            }
-
-            int num = i + 1;
-
-            System.out.println(num);
-            System.out.println(nums[i]);
-            System.out.println("--------");
-
-            if (num + m< nums[i]) {
-                m++;
-                list.add(num);
-            }
-        }
-
-        return list;
-    }
-
-    public static void main(String[] args) {
-        // 4,3,2,7,8,2,3,1
-        // 1,2,3,4,7,8
-        // 5,6
-        System.out.println(findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1}));
     }
 
 

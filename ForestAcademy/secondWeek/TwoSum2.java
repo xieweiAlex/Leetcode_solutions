@@ -13,9 +13,9 @@ package ForestAcademy.secondWeek;
 
  https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/?tab=Description
  */
-public class TwoSum {
+public class TwoSum2 {
 
-    public int[] twoSum(int[] numbers, int target) {
+    public int[] twoSum2(int[] numbers, int target) {
         int[] indices = new int[2];
         int left = 0, right = numbers.length-1;
         while (left < right) {

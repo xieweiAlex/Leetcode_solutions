@@ -1,4 +1,4 @@
-package June;
+package June.week1;
 
 /**
  Given a singly linked list, determine if it is a palindrome.
@@ -30,6 +30,7 @@ public class LinkedListIsPalindrome {
             slow = slow.next;
         }
 
+        // TODO: in what sense make right smaller?
         // odd nodes: let right half smaller
         if (fast != null) {
             slow = slow.next;
@@ -48,7 +49,7 @@ public class LinkedListIsPalindrome {
 
     public ListNode reverse(ListNode head) {
         ListNode pre = null;
-        ListNode node = null;
+        ListNode node;
 
         while (head != null) {
             node = head.next;
@@ -56,9 +57,6 @@ public class LinkedListIsPalindrome {
             pre = head;
             head = node;
         }
-
         return pre;
     }
-
-
 }

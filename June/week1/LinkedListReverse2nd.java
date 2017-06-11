@@ -1,4 +1,4 @@
-package June;
+package June.week1;
 
 /**
  * Created by Alex_Xie on 03/06/2017.
@@ -25,6 +25,47 @@ public class LinkedListReverse2nd {
             next = null;
         }
     }
+
+    public ListNode reverseBetween1(ListNode head, int m, int n) {
+        if (head == null) return null;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode pre = dummy;
+
+        for (int i = 0; i < m - 1; i++) {
+            pre = pre.next;
+        }
+
+        ListNode start = pre.next;
+        ListNode then = start.next;
+        while (head != null) {
+            start.next = then.next;
+            then.next = pre.next;
+            pre.next = then;
+            then = start.next;
+        }
+
+        return dummy.next;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null) return null;

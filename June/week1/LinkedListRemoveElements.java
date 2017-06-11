@@ -1,4 +1,4 @@
-package June;
+package June.week1;
 
 /**
  * Created by Alex_Xie on 02/06/2017.

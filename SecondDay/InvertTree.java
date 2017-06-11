@@ -43,11 +43,4 @@ public class InvertTree {
         return root;
     }
 
-
-    public static void main(String[] args) {
-
-    }
-
-
-
 }
