@@ -9,9 +9,8 @@ package ForestAcademy.week2;
 
  https://leetcode.com/problems/reverse-linked-list/?tab=Description
  */
-public class ReverseLinkedList_null {
+public class ReverseLinkedList {
 
-    // TODO; have not complete
     class ListNode {
         int val;
         ListNode next;
@@ -19,15 +18,17 @@ public class ReverseLinkedList_null {
     }
 
     public ListNode reverseList(ListNode head) {
-        ListNode newHead = null;
-        while (head.next != null) {
-            ListNode next = head.next;
-            head.next = newHead;
-            newHead = head;
-            head = next;
+
+        ListNode pre = null;
+        ListNode node;
+        while (head != null) {
+            node = head.next;
+            head.next = pre;
+            pre = head;
+            head = node;
         }
 
-        return null;
+        return pre;
     }
 
 

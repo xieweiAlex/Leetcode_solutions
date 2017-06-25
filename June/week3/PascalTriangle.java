@@ -23,7 +23,7 @@ import java.util.List;
 public class PascalTriangle {
 
     public List<List<Integer>> generate1(int numRows) {
-        List<List<Integer>> allrows = new ArrayList();
+        List<List<Integer>> allRows = new ArrayList();
         List<Integer> row = new ArrayList();
 
         for (int i = 0; i < numRows; i++) {
@@ -34,9 +34,9 @@ public class PascalTriangle {
                 // set(index, ele) means replace
                 row.set(j, row.get(j) + row.get(j+1) );
             }
-            allrows.add(new ArrayList<>(row));
+            allRows.add(new ArrayList<>(row));
         }
-        return allrows;
+        return allRows;
     }
 
     public List<List<Integer>> generate(int numRows) {

@@ -54,9 +54,4 @@ public class KDiffPath {
 
         return count;
     }
-
-    static void main(String[] args) {
-
-    }
-
 }
