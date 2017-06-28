@@ -36,6 +36,7 @@ public class InvertTree {
         if (root == null) {
            return null;
         }
+        // don't use right because right has been changed when using it.
         TreeNode tmp = root.right;
         root.right = invertTree(root.left);
         root.left = invertTree(tmp);

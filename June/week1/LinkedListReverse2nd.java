@@ -49,24 +49,6 @@ public class LinkedListReverse2nd {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null) return null;
         ListNode dummy = new ListNode(0);

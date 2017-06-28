@@ -19,6 +19,7 @@ public class StrStr {
             return -1;
         }
 
+        // TODO: why (+1) this one works instead of crash?
         for (int i = 0; i < source.length() - target.length() +1; i++) {
             int j = 0;
             for (j = 0; j < target.length(); j++) {

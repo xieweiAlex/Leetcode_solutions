@@ -33,7 +33,6 @@ public class TwoSum2 {
                 right--;
             }
         }
-
         return indices;
     }
 }
