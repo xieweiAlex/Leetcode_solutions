@@ -19,8 +19,8 @@ public class StrStr {
             return -1;
         }
 
-        // TODO: why (+1) this one works instead of crash?
-        for (int i = 0; i < source.length() - target.length() +1; i++) {
+        // (+1) this one works instead of crash? -- j max length()-1
+        for (int i = 0; i <= source.length() - target.length(); i++) {
             int j = 0;
             for (j = 0; j < target.length(); j++) {
                 if (source.charAt(i + j) != target.charAt(j)) {

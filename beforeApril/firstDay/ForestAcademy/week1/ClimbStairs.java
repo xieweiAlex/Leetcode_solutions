@@ -11,7 +11,6 @@ package beforeApril.firstDay.ForestAcademy.week1;
  Note: Given n will be a positive integer.
 
  https://leetcode.com/problems/climbing-stairs/
- // TODO: Dynamic programming
  */
 public class ClimbStairs {
 

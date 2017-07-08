@@ -26,7 +26,7 @@ public class BSTKthSmallest {
 
     public int kthSmallest(TreeNode root, int k) {
         int count = countNodes(root.left);
-        // TODO: why not count k == count as the target??
+
         if (k <= count) {
             return kthSmallest(root.left, k);
         } else if (k > count + 1) {
@@ -52,7 +52,9 @@ public class BSTKthSmallest {
     }
 
     private void helper(TreeNode node) {
-        if (node.left != null) helper(node.left);
+        if (node.left != null) {
+            helper(node.left);
+        }
         count--;
 
         if (count == 0) {

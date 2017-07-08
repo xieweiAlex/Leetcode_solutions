@@ -16,7 +16,7 @@ public class MySqrt {
 
         int left = 1, right = x;
         while (true) {
-            // TODO: What's the difference ????
+            // prevent overflow
             int mid = left + (right - left)/2;
 //            if (mid * mid > x) {
             if (mid > x/mid) {

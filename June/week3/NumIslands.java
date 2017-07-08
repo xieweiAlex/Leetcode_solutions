@@ -44,7 +44,6 @@ public class NumIslands {
         return count;
     }
 
-    // TODO: Why we call it DFS instead of BFS ??
     private void DFSMarking(char[][] grid, int i, int j) {
         if (i < 0 || j < 0 || i >= row || j >= col || grid[i][j] != '1') {
             return;

@@ -28,22 +28,19 @@ public class ValidSudoku {
                 if (board[i][j] != '.' && !rows.add(board[i][j])) {
                     return false;
                 }
-                if (board[j][i] != '.' && !rows.add(board[j][i])) {
+                if (board[j][i] != '.' && !columns.add(board[j][i])) {
                     return false;
                 }
 
                 int rowIndex = 3 * (i / 3) + j / 3;
                 int colIndex = 3 * (i % 3) + j % 3;
                 if (board[rowIndex][colIndex] != '.'
-                        && !rows.add(board[rowIndex][colIndex])) {
-
+                        && !cube.add(board[rowIndex][colIndex])) {
+                    return false;
                 }
-
-
             }
         }
-
-        return false;
+        return true;
     }
 
 }

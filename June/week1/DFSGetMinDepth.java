@@ -16,6 +16,7 @@ package June.week1;
  / \
  4   5
  The minimum depth is 2.
+ https://leetcode.com/problems/minimum-depth-of-binary-tree/#/description
 
  http://www.lintcode.com/en/problem/minimum-depth-of-binary-tree/#
  http://www.jiuzhang.com/solution/minimum-depth-of-binary-tree/
@@ -40,7 +41,7 @@ public class DFSGetMinDepth {
     }
 
     private int getMin(TreeNode root) {
-        // TODO: still haven't get why get MAX_VALUE
+        // TODO: to fix
         if (root == null) {
             return Integer.MAX_VALUE;
         }

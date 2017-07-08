@@ -28,12 +28,10 @@ public class IsPowerOfFour {
         return num == 4;
     }
 
-    // TODO: didn't get it why num & (num-1) verify power of 2
     public static boolean isPowerOfFour1(int num) {
         return (num&(num-1))==0 && num>0 && (num-1)%3==0;
     }
 
-    // TODO: don't know
     public boolean isPowerOfFour2(int num) {
         return num > 0 && (num & (num - 1)) == 0 && (num - 1) % 3 == 0;
     }

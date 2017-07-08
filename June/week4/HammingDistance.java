@@ -27,7 +27,7 @@ package June.week4;
  */
 public class HammingDistance {
 
-    // TODO: don't understand, why adding after x^y
+    // FIXME: don't understand, why adding after x^y
     public int hammingDistance(int x, int y) {
         int xor = x^y;
         int res = 0;
