@@ -11,7 +11,6 @@ package June.week1;
 
  Don't forget to mark the left child of each node to null. Or you will get Time Limit Exceeded or Memory Limit Exceeded.
 
- Have you met this question in a real interview? Yes
  Example
  1
  \
@@ -24,6 +23,8 @@ package June.week1;
  5
  \
  6
+
+ http://www.lintcode.com/en/problem/flatten-binary-tree-to-linked-list/
  */
 public class DFSFlattenTree {
     public class TreeNode {
@@ -48,7 +49,7 @@ public class DFSFlattenTree {
             lastNode.right = root;
         }
 
-        // TODO: why need get the right node from node first ???
+        // why need get the right node from node first ??? cause it changed by lastNode
         TreeNode right = root.right;
         lastNode = root;
         flatten(root.left);

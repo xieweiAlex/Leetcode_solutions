@@ -8,7 +8,6 @@ package July.week2;
  For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
  the contiguous subarray [4,-1,2,1] has the largest sum = 6.
 
- click to show more practice.
 
  More practice:
  If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
@@ -18,7 +17,6 @@ package July.week2;
 public class MaxSubArray {
 
     public int maxSubArray(int[] nums) {
-        int n = nums.length;
 
         // dp[] records the sum of previously nums, if dp[i-1] < 0, then start a new journey
         int[] dp = new int[nums.length];
@@ -29,7 +27,6 @@ public class MaxSubArray {
             dp[i] = nums[i] + (dp[i-1] > 0 ? dp[i-1]: 0);
             max = Math.max(dp[i], max);
         }
-
 
         return max;
     }

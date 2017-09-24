@@ -70,3 +70,4 @@ public class LinkedListReverse2nd {
         return dummy.next;
     }
 }
+

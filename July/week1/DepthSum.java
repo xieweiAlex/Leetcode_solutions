@@ -9,6 +9,8 @@ package July.week1;
 
  "{-11,{12,{3}},4}" -> -11 + 2*12 + 3(3) + 4 = 26
  "{-11,{12,{-3}},4}" -> -11 + 2*12 + 3(-3) + 4 = 8
+
+ from kiip interview
  */
 public class DepthSum {
 

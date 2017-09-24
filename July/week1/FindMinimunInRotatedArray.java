@@ -11,7 +11,6 @@ package July.week1;
 
  You may assume no duplicate exists in the array.
 
-
  https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/#/description
  */
 public class FindMinimunInRotatedArray {
