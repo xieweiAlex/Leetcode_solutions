@@ -42,5 +42,4 @@ public class InsertionSortList {
         return dummy.next;
     }
 
-
 }

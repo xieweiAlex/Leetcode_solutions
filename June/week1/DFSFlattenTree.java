@@ -49,7 +49,7 @@ public class DFSFlattenTree {
             lastNode.right = root;
         }
 
-        // why need get the right node from node first ??? cause it changed by lastNode
+        // the reason keep right first cause we gonna change it later, keep a reference in other place
         TreeNode right = root.right;
         lastNode = root;
         flatten(root.left);
@@ -59,3 +59,6 @@ public class DFSFlattenTree {
     // TODO: There are two other ways I haven't figured out
     // http://www.jiuzhang.com/solution/flatten-binary-tree-to-linked-list/
 }
+
+
+

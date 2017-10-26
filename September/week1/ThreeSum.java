@@ -18,6 +18,7 @@ A solution set is:
 ]
 
 https://leetcode.com/problems/3sum/description/
+https://discuss.leetcode.com/topic/28857/easiest-java-solution
  */
 
 public class ThreeSum {
@@ -26,14 +27,15 @@ public class ThreeSum {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
+            // TODO: why skip, how to run the test code above
             if (i > 0 && nums[i] == nums[i-1]) {
                 // skip same result
                 continue;
             }
 
+            int target = 0 - nums[i];
             int j = i + 1;
             int k = nums.length - 1;
-            int target = 0 - nums[i];
             while ( j < k) {
                 if (nums[j] + nums[k] == target) {
                     res.add(Arrays.asList(nums[i], nums[j], nums[k]));

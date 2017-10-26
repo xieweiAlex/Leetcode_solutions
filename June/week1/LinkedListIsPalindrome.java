@@ -30,8 +30,7 @@ public class LinkedListIsPalindrome {
             slow = slow.next;
         }
 
-        // TODO: in what sense make right smaller?
-        // odd nodes: let right half smaller
+        // odd nodes: make slow move right once
         if (fast != null) {
             slow = slow.next;
         }
