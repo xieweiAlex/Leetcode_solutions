@@ -38,6 +38,9 @@ public class RemoveElement {
             else
                 i++;
         }
+
+
+
         return n;
     }
 }
