@@ -116,6 +116,7 @@ public class LFUCache {
         // count means reference count
         public int count = 0;
         // Keys are the keys has the same reference count
+        // TODO: why we must use linkedList here?
         public LinkedHashSet<Integer> keys;
         public Node prev = null, next = null;
 

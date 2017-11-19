@@ -36,7 +36,7 @@ import java.util.Map;
 
 public class PrintOrganise {
 
-    public static void printoranise(String[] strings) {
+    public static void printOrganise(String[] strings) {
 
         Map<String, List<String>> managerMap = new HashMap<>();
         for (String str: strings) {
@@ -97,7 +97,7 @@ public class PrintOrganise {
 
 
         String[] strings = new String[]{"B2,E5,F6", "A1,B2,C3,D4", "D4,G7,I9", "G7,H8"};
-        printoranise(strings);
+        printOrganise(strings);
 
     }
 
